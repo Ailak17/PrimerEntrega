@@ -2,8 +2,7 @@ let numeroGanador = 5;
 let numero = parseInt(prompt("Ingrese un numero del 1 al 10 para descubrir su descuento!"));
 let total_pagar = 0;
 let descuento = 0;
-numerosCercanos = 4 && 6;
-numeroLejanos = numero < 4 | numero > 7 ; 
+numerosCercanos = 4, 6;
 
 if (numero === numeroGanador) {
     alert("ACERTASTE!!! Tenes 25% de descuento en toda la tienda! ");
