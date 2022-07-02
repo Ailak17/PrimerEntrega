@@ -7,7 +7,7 @@ let descuento = 0;
 if (numero === numeroGanador) {
     alert("ACERTASTE!!! Tenes 25% de descuento en toda la tienda! ");
     descuento = 25;
-} else if (numero === 4 || numero === 6) {
+} else if (numero === 4, 6) {
     alert("No es el numero ganador! pero estuviste muy cerca! Tenes 15% de descuento en la tienda! ");
     descuento = 15;
 } else if (numero === 3 , 2 , 1 || numero === 7 , 8 , 9 , 10) {
