@@ -10,7 +10,7 @@ if (numero === numeroGanador) {
 } else if (numero === 4 || numero === 6) {
     alert("No es el numero ganador! pero estuviste muy cerca! Tenes 15% de descuento en la tienda! ");
     descuento = 15;
-} else if (numero === 3 , 2 , 1 || numero === 7 , 8 , 9 , 10) {
+} else if (numero === 3, 2, 1 || numero === 7, 8, 9, 10) {
     alert("No es el numero ganador! Te llevas 10% de descuento por participar");
     descuento = 10;
 } else {
@@ -48,52 +48,34 @@ let mensaje_final = "El total a pagar con tu descuento es: $" + (total_pagar - d
 alert(mensaje_final);
 console.log(mensaje_final);
 
-
-/* while (true) {
-    switch (numero) {
-        case 1:
-            alert("1 no es el numero ganador! Te llevas 10% de descuento por participar");
-            descuento = total_pagar * 0.10;
-            
-        case 2:
-            alert("2 no es el numero ganador! Te llevas 10% de descuento por participar");
-            descuento = total_pagar * 0.10;
-            repetir = 0;
-        case 3:
-            alert("3 no es el numero ganador! Te llevas 10% de descuento por participar");
-            descuento = total_pagar * 0.10;
-            repetir = 0;
-        case 4:
-            alert("4 no es el numero ganador! pero estuviste muy cerca! Tenes 15% de descuento en la tienda! ");
-            descuento = total_pagar * 0.15;
-            repetir = 0;
-        case 5:
-            alert("ACERTASTE!!! Tenes 25% de descuento en toda la tienda! ");
-            descuento = total_pagar * 0.25;
-            repetir = 0;
-        case 6:
-            alert("6 no es el numero ganador! pero estuviste muy cerca! Tenes 15% de descuento en la tienda! ");
-            descuento = total_pagar * 0.15;
-            repetir = 0;
-        case 7:
-            alert("7 no es el numero ganador! Te llevas 10% de descuento por participar");
-            descuento = total_pagar * 0.10;
-            repetir = 0;
-        case 8:
-            alert("8 no es el numero ganador! Te llevas 10% de descuento por participar");
-            descuento = total_pagar * 0.10;
-            repetir = 0;
-        case 9:
-            alert("9 no es el numero ganador! Te llevas 10% de descuento por participar");
-            descuento = total_pagar * 0.10;
-            repetir = 0;
-        case 10:
-            alert("10 no es el numero ganador! Te llevas 10% de descuento por participar");
-            descuento = total_pagar * 0.10;
-            repetir = 0;
-        default:
-            alert("No es un numero correcto");
-            descuento = 0;
-            repetir = 0;
+class Bordado {
+    constructor(nombre, tamaño, precio) {
+        this.nombre = nombre;
+        this.tamaño = tamaño;
+        this.precio = precio;
+        this.vendido = false;
     }
-} */
+    vender() {
+        this.vendido = true;
+    }
+}
+const bordados = [];
+
+bordados.push(new Bordado("levi", "8cm", 300));
+bordados.push(new Bordado("gato", "10cm", 400));
+bordados.push(new Bordado("flores", "8cm", 300));
+bordados.push(new Bordado("amigas", "10cm", 400));
+
+for (const Bordado of bordados) {
+    Bordado.vender();
+}
+console.log(bordados);
+
+let disponible = prompt("Ingrese la tematica del bordado para verificar su disponibilidad").toLowerCase();
+let resultado = bordados.some(elemento => elemento.nombre === disponible);
+console.log(resultado);
+if (resultado) {
+    alert("Producto disponible");
+} else {
+    alert("Producto no disponible");
+}
