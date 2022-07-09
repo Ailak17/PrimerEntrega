@@ -48,3 +48,34 @@ let mensaje_final = "El total a pagar con tu descuento es: $" + (total_pagar - d
 alert(mensaje_final);
 console.log(mensaje_final);
 
+class Bordado {
+    constructor(nombre, tamaño, precio) {
+        this.nombre = nombre;
+        this.tamaño = tamaño;
+        this.precio = precio;
+        this.vendido = false;
+    }
+    vender() {
+        this.vendido = true;
+    }
+}
+const bordados = [];
+
+bordados.push(new Bordado("levi", "8cm", 300));
+bordados.push(new Bordado("gato", "10cm", 400));
+bordados.push(new Bordado("flores", "8cm", 300));
+bordados.push(new Bordado("amigas", "10cm", 400));
+
+for (const Bordado of bordados) {
+    Bordado.vender();
+}
+console.log(bordados);
+
+let disponible = prompt("Ingrese la tematica del bordado para verificar su disponibilidad").toLowerCase();
+let resultado = bordados.some(elemento => elemento.nombre === disponible);
+console.log(resultado);
+if (resultado) {
+    alert("Producto disponible");
+} else {
+    alert("Producto no disponible");
+}
