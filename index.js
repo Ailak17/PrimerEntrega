@@ -1,4 +1,4 @@
-let numeroGanador = 5;
+/* let numeroGanador = 5;
 let numero = parseInt(prompt("Ingrese un numero del 1 al 10 para descubrir su descuento!"));
 let total_pagar = 0;
 let descuento = 0;
@@ -78,4 +78,27 @@ if (resultado) {
     alert("Producto disponible");
 } else {
     alert("Producto no disponible");
-}
+} */
+
+const carrito = [];
+
+let boton1 = document.getElementById("btnCarritoFlor"); 
+boton1.addEventListener("click", () => {
+    carrito.push("Flores") 
+    console.log(carrito)
+});
+let boton2 = document.getElementById("btnCarritoLevi"); 
+boton2.addEventListener("click", () => {
+    carrito.push("Levi") 
+    console.log(carrito)
+});
+let boton3 = document.getElementById("btnCarritoGatito"); 
+boton3.addEventListener("click", () => {
+    carrito.push("Gatito") 
+    console.log(carrito)
+});
+let boton4 = document.getElementById("btnCarritoAmigas"); 
+boton4.addEventListener("click", () => {
+    carrito.push("Amigas") 
+    console.log(carrito)
+});

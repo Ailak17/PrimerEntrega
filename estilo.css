@@ -75,3 +75,23 @@ main {
 .card-body {
     background-color: rgb(251, 253, 216);
 }
+
+.botonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+.estiloBoton {
+    font-family: Arial, sans-serif
+}
+.Sformulario {
+    background-color: rgb(174, 108, 201);
+
+}
+.rojo {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: blueviolet;
+    text-align: center;
+}
