@@ -89,9 +89,14 @@ main {
     background-color: rgb(174, 108, 201);
 
 }
-.rojo {
+.informacion {
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     color: blueviolet;
+    text-align: center;
+}
+.rojo {
+    background-color: red;
+    color: black;
     text-align: center;
 }
